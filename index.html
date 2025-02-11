@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentinsday</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ffbbc1;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding-right: 65px;
+        }
+
+        button, a {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #yes {
+            background-color: #48a860;
+            color: white;
+        }
+
+        #no {
+            background-color: #d0312d;
+            color: white;
+            position: absolute;
+        }
+
+        #yay {
+            display: none;
+            text-align: center;
+        }
+
+        #select {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="select">
+        <img src="Screenshot 2025-02-11 021343.png" alt="Doggy with flower">
+        <h1 style="color: whitesmoke">Will you be my valentine?</h1>
+
+        <div class="container">
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+
+    <div id="yay">
+        <img src="milk-bear-love-mocha-cute-hug-o4qy1xq5p6myps41.gif" alt="Bears">
+        <h1 style="color: whitesmoke">Yaaaayyy!!! I knew you would say yes ;D</h1>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("no");
+        const yesButton = document.getElementById("yes");
+        const yay = document.getElementById("yay");
+        const select = document.getElementById("select");
+
+        noButton.addEventListener("mouseover", function () {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        yesButton.addEventListener("click", function () {
+            yay.style.display = "block";
+            select.style.display = "none";
+        })
+    </script>
+</body>
+
+</html>
